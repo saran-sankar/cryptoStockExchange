@@ -1,0 +1,355 @@
+<! doctype html>
+<html>
+    <h1>CryptoStock</h1>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 60;
+        }
+    </style>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Trade</button>
+        <button class="tablinks" onclick="openCity(event, 'NewYork')">Portfolio</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Stocks</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Mining</button>
+    </div>
+    <!-- Tab content -->
+    <div id="NewYork" class="tabcontent">
+    <body>
+        
+        <h2>Portfolio</h2>
+        
+        <table id="t00">
+            <tr>
+                <th>Stock</th>
+                <th>Qty</th>
+                <th>Purchase Price</th>
+                <th>Current Price</th>
+                <th>Total Value</th>
+                <th>Total Gain/Loss</th>
+            </tr>
+        </table>
+        
+    </body>
+    </div>
+    <div id="London" class="tabcontent">
+        <head>
+            <style>
+            .button2 {border-radius: 8px;}
+                </style>
+        </head>
+        <body>
+            <style>
+                .button2 {
+                    position: absolute;
+                    left: 672px;
+                    top: 330px;
+                }
+            h2 {
+                text-align: center;
+            }
+            </style>
+            <h2><br></br>Trade Stocks</h2>
+            <style>
+                input[type=text], select {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+            
+            input[type=submit] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+            
+            div {
+                border-radius: 5px;
+                background-color: #ffffff;
+                padding: 20px;
+            }
+            </style>
+            <body>
+                <div>
+                    <form id="form_id" method="post" name="myform" onsubmit="return trade();"method="post">
+                        <label for=" secretkey">CryptoStock Address</label>
+                        <input type="text" id=" secretkey" name="secret_key" placeholder="Your trader key will be hashed">
+                            
+                            <label for="qty">Qty</label>
+                            <input type="text" id="qty" name="quantity" placeholder="Qty">
+                                
+                                <label for="stock">Stock</label>
+                                <select id="stock" name="stock">
+                                    <option value="NKE">NKE</option>
+                                    <option value="AAPL">AAPL</option>
+                                    <option value="KO">KO</option>
+                                    <option value="SBUX">SBUX</option>
+                                    <option value="WMT">WMT</option>
+                                    <option value="NFLX">NFLX</option>
+                                    <option value="TSLA">TSLA</option>
+                                    <option value="DIS">DIS</option>
+                                    <option value="FB">FB</option>
+                                    <option value="PG">PG</option>
+                                    <option value="AMZN">AMZN</option>
+                                    <option value="MCD">MCD</option>
+                                    
+                                </select>
+                                <br></br>
+                                <input type="submit" value="Trade">
+                                    </form>
+                </div>
+                
+            </body>
+            
+        </body>
+    </div>
+    <div id="Paris" class="tabcontent">
+        <head>
+            <style>
+                table {
+                    width:100%;
+                }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 15px;
+                text-align: left;
+            }
+            table#t01 tr:nth-child(even) {
+                background-color: #eee;
+            }
+            table#t01 tr:nth-child(odd) {
+                background-color: #fff;
+            }
+            table#t01 th {
+                background-color: black;
+                color: white;
+            }
+            </style>
+        </head>
+        <body>
+            
+            <h2>Stocks</h2>
+            
+            <table id="t01">
+                <tr>
+                    <th>Stock</th>
+                    <th>Outstanding</th>
+                    <th>Changes</th>
+                    <th>Price</th>
+                    <th>Market Cap</th>
+                </tr>
+            </table>
+            
+        </body>
+    </div>
+    <div id="Tokyo" class="tabcontent">
+        <head>
+            <style>
+                .button {
+                    background-color: #4CAF50; /* Green */
+                    border: none;
+                    color: white;
+                    padding: 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 20px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                }
+            .button3 {border-radius: 8px;}
+                </style>
+        </head>
+        <body>
+            <style>
+                .button3 {
+                    position: absolute;
+                    left: 623px;
+                    top: 350px;
+                }
+            h2 {
+                text-align: center;
+            }
+            .button4 {border-radius: 8px;}
+                </style>
+            </head>
+            <body>
+                <style>
+                    .button4 {
+                        position: absolute;
+                        left: 636px;
+                        top: 560px;
+                    }
+            </style>
+            <h2><br></br> Update Your CryptoStock Chain to Start Mining</h2>
+            <button class="button button3" onclick="register()">Get CryptoStock</button>
+            <h2><br></br><br></br><br></br> Submit the Newly Forged Block to the Network</h2>
+            <button class="button button4" onclick="submit_block()">Submit Block</button>
+        </body>
+    </div>
+    <style>
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #777777;
+        }
+    
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+    
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+    
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+    
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+    }
+    </style>
+    <script>
+        
+        // Find a <table> element with id="myTable":
+        var table0 = document.getElementById("t00");
+        
+        xhttp0 = new XMLHttpRequest();
+        xhttp0.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+                stocks = JSON.parse(xhttp0.responseText)
+                symbols = ["NKE","AAPL","KO","SBUX","WMT","NFLX","TSLA","DIS","FB","PG","AMZN","MCD"]
+                console.log(stocks[symbols[0]])
+                for(var i in symbols){
+                    var row = table0.insertRow(1);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5= row.insertCell(4);
+                    var cell6= row.insertCell(5);
+                    //cell1.innerHTML = symbols[i]
+                    cell1.innerHTML = stocks[symbols[i]][0];
+                    cell2.innerHTML = stocks[symbols[i]][1];
+                    cell3.innerHTML = stocks[symbols[i]][2];
+                    cell4.innerHTML = stocks[symbols[i]][3];
+                    cell5.innerHTML = stocks[symbols[i]][4];
+                    cell6.innerHTML = stocks[symbols[i]][5];
+                }
+            }
+        }
+    xhttp0.open("GET", "http://localhost:3500/portfolio", true);
+    xhttp0.send();
+    
+        // Find a <table> element with id="myTable":
+        var table = document.getElementById("t01");
+        
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+                stocks = JSON.parse(xhttp.responseText)
+                symbols = ["NKE","AAPL","KO","SBUX","WMT","NFLX","TSLA","DIS","FB","PG","AMZN","MCD"]
+                console.log(stocks[symbols[0]])
+                for(var i in symbols){
+                var row = table.insertRow(1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5= row.insertCell(4);
+                cell1.innerHTML = symbols[i]
+                cell2.innerHTML = stocks[symbols[i]][0];
+                cell3.innerHTML = stocks[symbols[i]][1];
+                cell4.innerHTML = stocks[symbols[i]][2];
+                cell5.innerHTML = stocks[symbols[i]][3];
+                }
+            }
+        }
+        xhttp.open("GET", "http://localhost:3500/stocks", true);
+        xhttp.send();
+        // Create an empty <tr> element and add it to the 1st position of the table:
+
+        document.getElementById("defaultOpen").click();
+        function register(){
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200) {
+                    alert("Blocks registered and conflicts resolved. Start mining!");
+                }
+            }
+            xhttp.open("GET", "http://localhost:3500/register", true);
+            xhttp.send();
+        }
+    function submit_block(){
+        alert("New block submitted");
+    }
+    function trade(){
+        var a = document.forms["myform"]["stock"].value;
+        var b = document.forms["myform"]["secret_key"].value;
+        var c = document.forms["myform"]["quantity"].value;
+        var formdata = a+"&"+b+"&"+c;
+        console.log(a,b,c)
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+                if(xhttp.responseText == "finished"){
+                alert("trade finished");
+                }
+            }
+        }
+        xhttp.open("POST", "http://localhost:3500/trade", true);
+        xhttp.send(formdata);
+        return false;
+    }
+    function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+        
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    </script>
+</html>
