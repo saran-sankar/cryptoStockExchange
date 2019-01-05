@@ -1,5 +1,5 @@
-Run crypto stock.js
+Run webapp/cryptostock.js
 
-Run receiving_address.js
+Run webapp/receiving_address.js
 
 Site at localhost: 3500
