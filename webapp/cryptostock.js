@@ -27,7 +27,7 @@ con.connect(function(err) {
             //var sender = 'c8adbb86a08647108cfbf6478bbfe08a'
             var assets ={}
             app.get('/', function(req,res){
-                    res.sendFile('/Users/me/Desktop/My_Stuff/Folder/CSE/Projects/DBMS/CryptoStock/webapp/test.html');
+                    res.sendFile(__dirname + 'webapp/exchange.html');
                     })
             app.get('/stocks', function(req,res){
                     sql = "select* from stocks"
