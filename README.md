@@ -1,4 +1,4 @@
-Refer https://github.com/ethanstykes/blockchain-stocks/blob/master/README.md
+Refer https://github.com/stykes/blockchain-stocks/blob/master/README.md
 
 Run webapp/cryptostock.js
 
